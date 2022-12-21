@@ -287,8 +287,21 @@ class menu:
 
                                     elif index1a3 == '2':  # modify job remaining
                                         old_job_name = input('Enter the name of the job you wish to modify: ')
-                                        new_remaining = int(input(f'You want to change the remaining of job {old_job_name} to: '))
-                                        admin.modify_remaining(old_job_name, new_remaining)
+
+                                        # 4 try
+                                        try:
+                                            new_remaining = int(
+                                                input(f'You want to change the remaining of job {old_job_name} to: '))
+                                        except ValueError as ex:
+                                            print(ex)
+                                        except:
+                                            print('sth wrong')
+                                        else:
+                                            admin.modify_remaining(old_job_name, new_remaining)
+
+                                    # new_remaining = int(
+                                    #     input(f'You want to change the remaining of job {old_job_name} to: '))
+                                    # admin.modify_remaining(old_job_name, new_remaining)
 
                                     elif index1a3 == '3':  # modify job type
                                         old_job_name = input('Enter the name of the job you wish to modify: ')
