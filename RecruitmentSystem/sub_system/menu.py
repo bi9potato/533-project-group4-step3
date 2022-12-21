@@ -278,7 +278,7 @@ class menu:
 
                                 while 1:
                                     index1a3 = input(
-                                        'Enter 1 to modify job name, 2 to modify remaining, 3 to modify type, 4 to modify date, 5 to exit modify')
+                                        'Enter 1 to modify job name, 2 to modify remaining, 3 to modify type, 4 to modify date, 10 to exit modify')
 
                                     if index1a3 == '1':  # modify job name
                                         old_job_name = input('Enter the name of the job you wish to modify: ')

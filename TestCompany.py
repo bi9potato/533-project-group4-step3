@@ -55,6 +55,15 @@ class TestCompany(unittest.TestCase):
         
         self.assertNotEqual(self.c1.get_len_ap(), 4)
         self.assertEqual(self.c1.get_len_ap(), 3)
+    
+    def test_sort_by_mark(self):
+        self.assertEqual(self.c1.sort_by_mark(), None)
+        
+        self.j1.mark = 90
+        self.j2.mark = 80
+        self.c1.aplication_list.append(self.j1)
+        self.c1.wait_list.append(self.j2)
+        self.assertEqual(self.c1.sort_by_mark(), None)
         
         
 unittest.main(argv=[''], verbosity=2, exit=False)
