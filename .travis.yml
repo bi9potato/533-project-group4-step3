@@ -3,4 +3,4 @@ python:
   - "3.9"
 # command to run tests
 script:
-  - python /my_suite.py
+  - python ./my_suite.py
