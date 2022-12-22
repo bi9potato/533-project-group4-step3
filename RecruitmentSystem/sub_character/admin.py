@@ -1,6 +1,8 @@
 
 from .user import user
 
+from ..sub_error.Error import LessZeroError
+
 # module
 class Admin(user):
 
@@ -34,13 +36,28 @@ class Admin(user):
 
     # Add job.  Parameters: Company, new job name, new job balance
     def add_job(self, new_job_name, new_remaining, new_type, new_date):
-        if self.job_exist(new_job_name):
-            print(f'job {new_job_name} already exists, insertion is prohibited.')
-        elif new_remaining < 0:
+
+        # 6 try
+        try:
+            if self.job_exist(new_job_name):
+                print(f'job {new_job_name} already exists, insertion is prohibited.')
+            elif new_remaining < 0:
+                # print('job ramining cannot < 0.')
+                raise LessZeroError()
+            else:
+                self.privilege.jobs[new_job_name] = [new_remaining, new_type, new_date]
+                print(f'add job {new_job_name} success.')
+        except LessZeroError:
             print('job ramining cannot < 0.')
-        else:
-            self.privilege.jobs[new_job_name] = [new_remaining, new_type, new_date]
-            print(f'add job {new_job_name} success.')
+
+
+        # if self.job_exist(new_job_name):
+        #     print(f'job {new_job_name} already exists, insertion is prohibited.')
+        # elif new_remaining < 0:
+        #     print('job ramining cannot < 0.')
+        # else:
+        #     self.privilege.jobs[new_job_name] = [new_remaining, new_type, new_date]
+        #     print(f'add job {new_job_name} success.')
 
     # Modify the job name.  Parameters: Company, old job name, new job name
     def modify_job_name(self, old_job_name, new_job_name):
@@ -107,12 +124,26 @@ class Admin(user):
 
         if len(self.privilege.application_list) != 0:  # If there are candidates then
             while 1:
-                index = int(input('Select the candidate serial number to view details: '))
-                if index > self.privilege.get_len_ap() or index < 0:
-                    print('No such serial number, please re-enter.')
+                # 1 try
+                try:
+                    index = int(input('Select the candidate serial number to view details: '))
+                except ValueError as ex:
+                    print(ex)
+                except:
+                    print('sth wrong')
                 else:
-                    the_candicate = self.privilege.get_candidate_details(index - 1)
-                    break
+                    if index > self.privilege.get_len_ap() or index < 0:
+                        print('No such serial number, please re-enter.')
+                    else:
+                        the_candicate = self.privilege.get_candidate_details(index - 1)
+                        break
+
+                # index = int(input('Select the candidate serial number to view details: '))
+                # if index > self.privilege.get_len_ap() or index < 0:
+                #     print('No such serial number, please re-enter.')
+                # else:
+                #     the_candicate = self.privilege.get_candidate_details(index - 1)
+                #     break
 
             print('account\tWorking years\tspeciality\tjob applied for\tScore')
             print(the_candicate.account, '\t', the_candicate.job_experience, '\t', the_candicate.speciality, '\t',
@@ -168,12 +199,27 @@ class Admin(user):
             print(i + 1, '\t', self.privilege.wait_list[i].account)
 
         while 1:
-            index = int(input('Select the candidate serial number to view details: '))
-            if index > len(self.privilege.wait_list) or index < 0:
-                print('No such serial number, please re-enter.')
+
+            # 5 try
+            try:
+                index = int(input('Select the candidate serial number to view details: '))
+            except ValueError as ex:
+                print(ex)
+            except:
+                print('sth wrong')
             else:
-                the_candicate = self.privilege.wait_list[index - 1]
-                break
+                if index > len(self.privilege.wait_list) or index < 0:
+                    print('No such serial number, please re-enter.')
+                else:
+                    the_candicate = self.privilege.wait_list[index - 1]
+                    break
+
+            # index = int(input('Select the candidate serial number to view details: '))
+            # if index > len(self.privilege.wait_list) or index < 0:
+            #     print('No such serial number, please re-enter.')
+            # else:
+            #     the_candicate = self.privilege.wait_list[index - 1]
+            #     break
 
         print('account\tWorking years\tspeciality\tjob applied for\tScore')
         print(the_candicate.account, '\t', the_candicate.job_experience, '\t', the_candicate.speciality, '\t',
@@ -208,12 +254,26 @@ class Admin(user):
 
         self.scan_application_list()
         while 1:
-            index = int(input('Select the candidate serial number to view details: '))
-            if index > self.privilege.get_len_ap() or index < 0:
-                print('No such serial number, please re-enter.')
+            # 2 try
+            try:
+                index = int(input('Select the candidate serial number to view details: '))
+            except ValueError as ex:
+                print(ex)
+            except:
+                print('sth wrong')
             else:
-                the_candicate = self.privilege.get_candidate_details(index - 1)
-                break
+                if index > self.privilege.get_len_ap() or index < 0:
+                    print('No such serial number, please re-enter.')
+                else:
+                    the_candicate = self.privilege.get_candidate_details(index - 1)
+                    break
+
+            # index = int(input('Select the candidate serial number to view details: '))
+            # if index > self.privilege.get_len_ap() or index < 0:
+            #     print('No such serial number, please re-enter.')
+            # else:
+            #     the_candicate = self.privilege.get_candidate_details(index - 1)
+            #     break
 
         print('account\tWorking years\tspeciality\tjob applied for\tScore')
         print(the_candicate.account, '\t', the_candicate.job_experience, '\t', the_candicate.speciality, '\t',
@@ -223,10 +283,23 @@ class Admin(user):
             index2 = input(f'Enter number 1 to rate {the_candicate.account}, 2 to exit: ')
 
             if index2 == '1':
-                mark = int(input('Enter the mark: '))
-                the_candicate.mark = mark
-                print('Scoring success.')
-                break
+                # 3 try
+                try:
+                    mark = int(input('Enter the mark: '))
+                except ValueError as ex:
+                    print(ex)
+                except:
+                    print('sth wrong')
+                else:
+                    the_candicate.mark = mark
+                    print('Scoring success.')
+                    break
+
+                # mark = int(input('Enter the mark: '))
+                # the_candicate.mark = mark
+                # print('Scoring success.')
+                # break
+
             elif index2 == '2':
                 print('exit rating!')
                 break
