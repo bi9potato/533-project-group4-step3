@@ -1,6 +1,6 @@
 import unittest
-from RecruitmentSystem.sub_system.company import company
-from RecruitmentSystem.sub_character.jobseeker import JobSeeker
+from ..RecruitmentSystem.sub_system.company import company
+from ..RecruitmentSystem.sub_character.jobseeker import JobSeeker
 
 class TestCompany(unittest.TestCase):
     

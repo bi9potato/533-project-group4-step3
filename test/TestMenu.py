@@ -1,5 +1,5 @@
 import unittest
-from RecruitmentSystem.sub_system.menu import menu
+from ..RecruitmentSystem.sub_system.menu import menu
 from unittest.mock import patch
 
 
