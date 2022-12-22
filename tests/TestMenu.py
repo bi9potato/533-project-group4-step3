@@ -1,7 +1,7 @@
 import unittest
 
 import sys
-sys.path.insert(0, sys.path[0][:-4])
+sys.path.insert(0, sys.path[0][:-5])
 
 from RecruitmentSystem.sub_system.menu import menu
 from unittest.mock import patch
