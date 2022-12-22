@@ -1,7 +1,6 @@
 import unittest
 from TestAdmin import TestAdmin
 from TestJobseeker import TestJobseeker
-
 from TestCompany import TestCompany
 from TestMenu import TestMenu
 

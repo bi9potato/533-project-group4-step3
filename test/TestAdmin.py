@@ -1,8 +1,13 @@
 import unittest
 
-from ..RecruitmentSystem.sub_character.admin import Admin
-from ..RecruitmentSystem.sub_system.company import company
-from ..RecruitmentSystem.sub_character.jobseeker import JobSeeker
+import sys
+sys.path.insert(0, sys.path[0][:-4])
+
+
+from RecruitmentSystem.sub_character.admin import Admin
+from RecruitmentSystem.sub_system.company import company
+from RecruitmentSystem.sub_character.jobseeker import JobSeeker
+
 
 
 from unittest.mock import patch

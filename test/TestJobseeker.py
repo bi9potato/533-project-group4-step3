@@ -1,7 +1,10 @@
 import unittest
 
-from ..RecruitmentSystem.sub_character.jobseeker import JobSeeker
-from ..RecruitmentSystem.sub_system.company import company
+import sys
+sys.path.insert(0, sys.path[0][:-4])
+
+from RecruitmentSystem.sub_character.jobseeker import JobSeeker
+from RecruitmentSystem.sub_system.company import company
 
 class TestJobseeker(unittest.TestCase):
     
