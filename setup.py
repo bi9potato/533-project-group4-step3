@@ -7,6 +7,6 @@ setup(
     license='MIT',
     description='A test python package',
 	url='https://github.com/bi9potato/533-project-group4-step3',
-    author='Renghe Tang, Gaosi Yue',
+    author='Renghe Tang, Siyue Gao',
     author_email='trh991015@gmail.com'
 )
