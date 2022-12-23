@@ -278,7 +278,7 @@ class menu:
 
                                 while 1:
                                     index1a3 = input(
-                                        'Enter 1 to modify job name, 2 to modify remaining, 3 to modify type, 4 to modify date, 10 to exit modify')
+                                        'Enter 1 to modify job name, 2 to modify remaining, 3 to modify type, 4 to modify date, 5 to exit modify')
 
                                     if index1a3 == '1':  # modify job name
                                         old_job_name = input('Enter the name of the job you wish to modify: ')
@@ -287,21 +287,8 @@ class menu:
 
                                     elif index1a3 == '2':  # modify job remaining
                                         old_job_name = input('Enter the name of the job you wish to modify: ')
-
-                                        # 4 try
-                                        try:
-                                            new_remaining = int(
-                                                input(f'You want to change the remaining of job {old_job_name} to: '))
-                                        except ValueError as ex:
-                                            print(ex)
-                                        except:
-                                            print('sth wrong')
-                                        else:
-                                            admin.modify_remaining(old_job_name, new_remaining)
-
-                                    # new_remaining = int(
-                                    #     input(f'You want to change the remaining of job {old_job_name} to: '))
-                                    # admin.modify_remaining(old_job_name, new_remaining)
+                                        new_remaining = int(input(f'You want to change the remaining of job {old_job_name} to: '))
+                                        admin.modify_remaining(old_job_name, new_remaining)
 
                                     elif index1a3 == '3':  # modify job type
                                         old_job_name = input('Enter the name of the job you wish to modify: ')
@@ -313,7 +300,7 @@ class menu:
                                         new_date = input(f'You want to change the date of job {old_job_name} to: ')
                                         admin.modify_date(old_job_name, new_date)
 
-                                    elif index1a3 == '10':  # exit modify
+                                    elif index1a3 == '5':  # exit modify
                                         print('exit modify!')
                                         break
 
