@@ -5,6 +5,8 @@
 The package link: https://pypi.org/project/RecruitmentSystem/
 This package is a **recruitment system** where allows admins from companies to manage jobs and candidates and job-seekers to search and apply jobs.
 
+[![Recruitment System]()](https://youtu.be/pxnmotLYH9A)
+
 ## sub-package1 : system
 ### module1 : menu
 * init : 2 companies, 2 admins and 5 jobseekers has been bulit in for testing
