@@ -1,6 +1,7 @@
 # 533-project-group4
 
 [![Build Status](https://app.travis-ci.com/bi9potato/533-project-group4-step3.svg?branch=main)](https://app.travis-ci.com/bi9potato/533-project-group4-step3)
+![PyPI](https://img.shields.io/pypi/v/RecruitmentSystem?color=Green)
 
 The package link: https://pypi.org/project/RecruitmentSystem/
 This package is a **recruitment system** where allows admins from companies to manage jobs and candidates and job-seekers to search and apply jobs.
