@@ -31,13 +31,13 @@ https://user-images.githubusercontent.com/73171680/209416371-b3e0f687-79a4-4556-
 * **modify_type** : if the job exist, change the job type
 * **modify_date** : if the job exist, change the date
 * **del_job** : if the job exist, delete the name
-* **scan_application_list : admins can check the list of applicants(show their accounts)
+* **scan_application_list** : admins can check the list of applicants(show their accounts)
 * **choose_candidate** : show all details of applicants such as experience of year and specialty and choose to add those applicants to accept_list or wait_list or delete from applicant_list and change their status
 * **scan_accept_list** : show all details of applicants that have been accepted
 * **process_waitlist** : show all details of applicants that are in waitlist and choose to add those applicants to accept_list or delete them and change their status
 * **marking** : show all details of applicants and mark them
 ### module3: jobseeker
-* **apply : jobseeker can input company and jobname to look for exising job and then add themselves to applicant_list
+* **apply** : jobseeker can input company and jobname to look for exising job and then add themselves to applicant_list
 * **check_notice** : jobseeker can check their status which are set by admins
 * **scan_jobs** : show all details of existing job in inputing company
 * **search_job_by_name** : show all details of existing job in inputing company and jobname
