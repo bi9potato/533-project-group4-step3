@@ -1,7 +1,7 @@
 # 533-project-group4
 
 [![Build Status](https://app.travis-ci.com/bi9potato/533-project-group4-step3.svg?branch=main)](https://app.travis-ci.com/bi9potato/533-project-group4-step3)
-[![Coverage Status](https://coveralls.io/repos/github/bi9potato/533-project-group4-step3/badge.svg?branch=main)](https://coveralls.io/github/bi9potato/533-project-group4-step3?branch=main)  
+[![Coverage Status](https://coveralls.io/repos/github/bi9potato/533-project-group4-step3/badge.svg?branch=main)](https://coveralls.io/github/bi9potato/533-project-group4-step3?branch=main)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/RecruitmentSystem?color=orange)
 ![PyPI](https://img.shields.io/pypi/v/RecruitmentSystem?color=Green)
 
