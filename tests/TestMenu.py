@@ -91,79 +91,73 @@ class TestMenu(unittest.TestCase):
     @patch("RecruitmentSystem.sub_system.menu.menu.search_company")
     def test_start(self, mock_company, mock_login, mock_input): # order！！！！！！！！
         
-        # # jobseeker
-        # mock_input.side_effect = ["1", '1', '1', 'gjob1', '4', '4', '3']
-        # mock_login.side_effect = [(True, 1, self.m.jobseekers[0])]
-        # mock_company.side_effect = [self.m.Google]
-        # self.assertFalse(self.m.start(), None)
+        # jobseeker
+        mock_input.side_effect = ["1", '1', '1', 'gjob1', '4', '4', '3']
+        mock_login.side_effect = [(True, 1, self.m.jobseekers[0])]
+        mock_company.side_effect = [self.m.Google]
+        self.assertFalse(self.m.start(), None)
         
-        # mock_input.side_effect = ["1", '1', '2', 'type 1', '4', '4', '3']
-        # mock_login.side_effect = [(True, 1, self.m.jobseekers[0])]
-        # mock_company.side_effect = [self.m.Google]
-        # self.assertFalse(self.m.start(), None)
+        mock_input.side_effect = ["1", '1', '2', 'type 1', '4', '4', '3']
+        mock_login.side_effect = [(True, 1, self.m.jobseekers[0])]
+        mock_company.side_effect = [self.m.Google]
+        self.assertFalse(self.m.start(), None)
         
-        # mock_input.side_effect = ["1", '1', '5', '3', '2022-10-10', '2022-10-10', '4', '4', '3']
-        # mock_login.side_effect = [(True, 1, self.m.jobseekers[0])]
-        # mock_company.side_effect = [self.m.Google]
-        # self.assertFalse(self.m.start(), None)
+        mock_input.side_effect = ["1", '1', '5', '3', '2022-10-10', '2022-10-10', '4', '4', '3']
+        mock_login.side_effect = [(True, 1, self.m.jobseekers[0])]
+        mock_company.side_effect = [self.m.Google]
+        self.assertFalse(self.m.start(), None)
         
-        # mock_input.side_effect = ["1", '2', 'Google', 'gjob1', '4', '3']
-        # mock_login.side_effect = [(True, 1, self.m.jobseekers[0])]
-        # mock_company.side_effect = [self.m.Google]
-        # self.assertFalse(self.m.start(), None)
+        mock_input.side_effect = ["1", '2', 'Google', 'gjob1', '4', '3']
+        mock_login.side_effect = [(True, 1, self.m.jobseekers[0])]
+        mock_company.side_effect = [self.m.Google]
+        self.assertFalse(self.m.start(), None)
         
-        # mock_input.side_effect = ["1", '2', 'Goo',  '4', '4', '3']
-        # mock_login.side_effect = [(True, 1, self.m.jobseekers[0])]
-        # mock_company.side_effect = [self.m.Google]
-        # self.assertFalse(self.m.start(), None)
+        mock_input.side_effect = ["1", '2', 'Goo',  '4', '4', '3']
+        mock_login.side_effect = [(True, 1, self.m.jobseekers[0])]
+        mock_company.side_effect = [self.m.Google]
+        self.assertFalse(self.m.start(), None)
         
-        # mock_input.side_effect = ["1", '3',  '4', '3']
-        # mock_login.side_effect = [(True, 1, self.m.jobseekers[0])]
-        # mock_company.side_effect = [self.m.Google]
-        # self.assertFalse(self.m.start(), None)
+        mock_input.side_effect = ["1", '3',  '4', '3']
+        mock_login.side_effect = [(True, 1, self.m.jobseekers[0])]
+        mock_company.side_effect = [self.m.Google]
+        self.assertFalse(self.m.start(), None)
         
-        # # admin
-        # mock_input.side_effect = ["1", '1', '11', '3']
-        # mock_login.side_effect = [(True, 2, self.m.admins[0])]
-        # mock_company.side_effect = [self.m.Google]
-        # self.assertFalse(self.m.start(), None)
+        # admin
+        mock_input.side_effect = ["1", '1', '11', '3']
+        mock_login.side_effect = [(True, 2, self.m.admins[0])]
+        mock_company.side_effect = [self.m.Google]
+        self.assertFalse(self.m.start(), None)
         
-        # mock_input.side_effect = ["1", '2', 'gjob11', '1', '1', '2022-1-1', '11', '3']
-        # mock_login.side_effect = [(True, 2, self.m.admins[0])]
-        # mock_company.side_effect = [self.m.Google]
-        # self.assertFalse(self.m.start(), None)
-        
-        # mock_input.side_effect = ["1", '3', 
-        #                           '1', 'gjob1', 'gjob111', 
-        #                           '2', 'gjob1', 12,
-        #                           '3', 'gjob1', 'type 2',
-        #                           '4', 'gjob1', '2022-10-12',
-        #                           '10', '11', '3']
-        # mock_login.side_effect = [(True, 2, self.m.admins[0])]
-        # mock_company.side_effect = [self.m.Google]
-        # self.assertFalse(self.m.start(), None)
+        mock_input.side_effect = ["1", '2', 'gjob11', '1', '1', '2022-1-1', '11', '3']
+        mock_login.side_effect = [(True, 2, self.m.admins[0])]
+        mock_company.side_effect = [self.m.Google]
+        self.assertFalse(self.m.start(), None)
         
         mock_input.side_effect = ["1", '3', 
-                                  '1', 'gjob1', 'gjob111',
+                                  '1', 'gjob1', 'gjob111', 
+                                  '2', 'gjob1', 12,
+                                  '3', 'gjob1', 'type 2',
+                                  '4', 'gjob1', '2022-10-12',
                                   '5', '11', '3']
         mock_login.side_effect = [(True, 2, self.m.admins[0])]
         mock_company.side_effect = [self.m.Google]
         self.assertFalse(self.m.start(), None)
         
-        # mock_input.side_effect = ["1", '4', 'gjob1', '11', '3']
-        # mock_login.side_effect = [(True, 2, self.m.admins[0])]
-        # mock_company.side_effect = [self.m.Google]
-        # self.assertFalse(self.m.start(), None)
         
-        # mock_input.side_effect = ["1", '5', '11', '3']
-        # mock_login.side_effect = [(True, 2, self.m.admins[0])]
-        # mock_company.side_effect = [self.m.Google]
-        # self.assertFalse(self.m.start(), None)
+        mock_input.side_effect = ["1", '4', 'gjob1', '11', '3']
+        mock_login.side_effect = [(True, 2, self.m.admins[0])]
+        mock_company.side_effect = [self.m.Google]
+        self.assertFalse(self.m.start(), None)
         
-        # mock_input.side_effect = ["1", '7', '9', '10', '11', '3']
-        # mock_login.side_effect = [(True, 2, self.m.admins[0])]
-        # mock_company.side_effect = [self.m.Google]
-        # self.assertFalse(self.m.start(), None)
+        mock_input.side_effect = ["1", '5', '11', '3']
+        mock_login.side_effect = [(True, 2, self.m.admins[0])]
+        mock_company.side_effect = [self.m.Google]
+        self.assertFalse(self.m.start(), None)
+        
+        mock_input.side_effect = ["1", '7', '9', '10', '11', '3']
+        mock_login.side_effect = [(True, 2, self.m.admins[0])]
+        mock_company.side_effect = [self.m.Google]
+        self.assertFalse(self.m.start(), None)
         
         
         
